@@ -1,8 +1,11 @@
 /**
  * 
- * @author srinath
  */
 
+/**
+ * @author srinath
+ *
+ */
 import java.lang.reflect.Array;
 public class Board {
 	private int size;
@@ -36,16 +39,13 @@ public String  printBoard(boolean board[][]) {
     for(int i=0; i<board.length; i++){
         for(int j =0; j<board.length; j++){
             if(board[i][j])
-                output.append("*");                            
+                output.append("*");                           
             else
-                output.append(".");                             
-        }output.append("\n");                                   
-   
-    }
-    return(output.toString());
-    }
+                output.append(".");                            
+        }output.append("\n");                                  
+    }System.out.print(output.toString());
 // checking for live cells
-public int livecells(boolean[][] currentgeneration, int p, int q ){
+    public int livecells(boolean[][] currentgeneration, int p, int q ){
         int n= currentgeneration.length;
         int lives = 0;
         for (int i = p-1; i <=p+1; i++) {
@@ -55,19 +55,18 @@ public int livecells(boolean[][] currentgeneration, int p, int q ){
                         lives+=1;
                     }
                 }
-                
             }
         }
-    return lives;    
+    return lives;   
     }
-   // generate next generation 
+   // generate next generation
     public void generateNextGeneration(boolean board[][]) {
         boolean[][] board1= new boolean[board.length][board.length];
         for (int i = 0; i < board.length; i++) {
             for (int j = 0; j < board.length; j++) {
-                int alive= livecells(board, i, j); 
+                int alive= livecells(board, i, j);
                 if(board[i][j])
-                {             
+                {            
                     if(alive<2){
                     board1[i][j]= false;
                 }
@@ -84,20 +83,9 @@ public int livecells(boolean[][] currentgeneration, int p, int q ){
                     }
                 }
             }
-            
         }
-    printBoard(board1);    
+    printBoard(board1);   
 }
-//	public Object countLiveCells(int i, int j) {
-//		// TODO Auto-generated method stub
-//		return null;
-//	}
-	public Integer countLiveCells(int i, int j) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	public Object generateNextGeneration() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 }
+
+
