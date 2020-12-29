@@ -15,21 +15,21 @@ class TestBoard {
 		public void teseboard() {
 			int[][] arrayint = new[6][3];			
 			arrayint[0][0]=1;
-			arrayint[0][0]=1;
-			arrayint[0][0]=1;
-			arrayint[0][0]=1;
-			arrayint[0][0]=1;
-			arrayint[0][0]=1;
-			arrayint[0][0]=1;
-			arrayint[0][0]=1;
+			arrayint[0][1]=1;
+			arrayint[0][2]=1;
+			arrayint[1][0]=1;
+			arrayint[1][1]=1;
+			arrayint[1][2]=1;
+			arrayint[2][0]=1;
+			arrayint[2][1]=1;
 			
 			Board b=new Board( 6,arrayint);
 			
-			public void testctreateboard();{
+			public void testctreateboard(){
 				
 			}
 			
-			public void testprintboard();{
+			public void testprintboard(){
 				
 			}
 			Board z = new Board();
